@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mongo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-zinc-900 text-white flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-md bg-zinc-800 p-8 rounded-2xl shadow-xl border border-zinc-700">
+        
+
+        <h1 class="text-3xl font-bold mb-6 text-center">Create User</h1>
+
+        <form action="/create" method="POST" class="flex flex-col gap-4">
+
+            <input
+                class="px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 transition"
+                type="text" placeholder="Name" name="name">
+
+            <input
+                class="px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 transition"
+                type="email" placeholder="Email" name="email">
+
+            <input
+                class="px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 transition"
+                type="url" placeholder="Image URL" name="image">
+
+            <input
+                class="mt-2 py-3 bg-blue-600 hover:bg-blue-700 rounded-xl font-semibold transition duration-200 shadow-lg hover:shadow-blue-500/30 cursor-pointer"
+                type="submit" value="Create User">
+
+        </form>
+        <div class="mt-4 text-center">
+            <a href="/read" class="text-blue-500 hover:text-blue-400"> READ USER</a>
+        </div>
+    </div>
+
+</body>
+
+</html>

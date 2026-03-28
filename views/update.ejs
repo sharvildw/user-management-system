@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit User</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-zinc-900 text-white flex items-center justify-center min-h-screen">
+
+  <div class="w-full max-w-md bg-zinc-800 p-8 rounded-2xl shadow-xl border border-zinc-700">
+
+    <h1 class="text-3xl font-bold mb-6 text-center">Edit User</h1>
+
+    <!-- IMPORTANT: action must include user id -->
+    <form action="/update/<%= user._id %>" method="POST" class="flex flex-col gap-4">
+
+      <!-- Name -->
+      <input 
+        name="name"
+        value="<%= user.name %>"
+        class="px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-xl outline-none focus:ring-2 focus:ring-blue-500"
+        type="text" 
+        placeholder="Name"
+      >
+
+      <!-- Email -->
+      <input 
+        name="email"
+        value="<%= user.email %>"
+        class="px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-xl outline-none focus:ring-2 focus:ring-blue-500"
+        type="email" 
+        placeholder="Email"
+      >
+
+      <!-- Image -->
+      <input 
+        name="image"
+        value="<%= user.image %>"
+        class="px-4 py-3 bg-zinc-700 border border-zinc-600 rounded-xl outline-none focus:ring-2 focus:ring-blue-500"
+        type="url" 
+        placeholder="Image URL"
+      >
+
+      <!-- Submit -->
+      <input 
+        class="mt-2 py-3 bg-green-600 hover:bg-green-700 rounded-xl font-semibold cursor-pointer"
+        type="submit" 
+        value="Update User"
+      >
+
+    </form>
+
+    <div class="mt-4 text-center">
+      <a href="/read" class="text-blue-500 hover:text-blue-400">Back to Users</a>
+    </div>
+
+  </div>
+
+</body>
+</html>
